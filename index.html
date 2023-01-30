@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tam giác</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="./tamgiac.png">
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+        <link href="./style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="bg"></div>
+        <div class="bg bg2"></div>
+        <div class="bg bg3"></div>
+        <div class="content">
+        <h1>Tam giác</h1>
+        <form>
+            <p>
+                <span>Cạnh a: </span>
+                <input type="number" id="canha">
+            </p>
+            <p>
+                <span>Cạnh b: </span>
+                <input type="number" id="canhb">
+            </p>
+            <p>
+                <span>Cạnh c: </span>
+                <input type="number" id="canhc">
+            </p>
+        </form>
+        <button id="test-button" pys-onclick="my_function">Ok</button>
+        <div class="container">
+            <div class="div_left">Kết quả:</div>
+            <div id="ketqua" class="div_right"></div>
+            <div class="chuvi_left">Chu vi:</div>
+            <div id="chuvi" class="chuvi_right"></div>
+            <div class="dientich_left">Diện tích:</div>
+            <div id="dientich" class="dientich_right"></div>
+        </div>
+        </div>
+        <py-script>
+        import math
+    def my_function(*args, **kwargs):
+        canh_a = float(Element("canha").element.value)
+        canh_b = float(Element("canhb").element.value)
+        canh_c = float(Element("canhc").element.value)
+        cv = canh_a + canh_b + canh_c
+        p = cv/2
+        dtich = math.sqrt(p*(p-canh_a)*(p-canh_b)*(p-canh_c))
+        if (canh_a<=0) or (canh_b<=0) or (canh_c<=0):
+            Element("ketqua").element.innerHTML = "Không phải là tam giác"
+        else:
+            Element("ketqua").element.innerHTML = ""
+            Element("chuvi").element.innerHTML = "{:.2f}".format(cv)
+            Element("dientich").element.innerHTML = "{:.2f}".format(dtich)
+        </py-script>
+    </body>
+</html>
