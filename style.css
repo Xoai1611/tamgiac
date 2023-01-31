@@ -1,36 +1,6 @@
 .container{
     width: 200px;    
 }    
-.div_left{    
-  width: 200px;
-  float: left;
-  text-align: center; 
-}    
-.div_right{    
-  width: 200px;
-  float: left;
-  text-align: center;   
-}        
-.chuvi_left{
-  width: 200px;
-  float: left;
-  text-align: center;
-}
-.chuvi_right{
-  width: 200px;
-  float: left;
-  text-align: center
-}
-.dientich_left{
-  width: 200px;
-  float: left;
-  text-align: center
-}
-.dientich_right{
-  width: 200px;
-  float: left;
-  text-align: center
-}
 html {
     height:100%;
   }
@@ -74,7 +44,8 @@ html {
   }
   
   h1 {
-    font-family:monospace;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
   }
   
   @keyframes slide {
